@@ -1,42 +1,81 @@
+/* Estilo general del contenedor principal */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+	background-color: #f9f9f9; /* Fondo claro */
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
+/* Estilo de la tarjeta de resultados */
 .card {
-  padding: 2em;
+	padding: 1.5em;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	background-color: #ffffff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	font-size: 1rem;
+	color: #333;
 }
 
+/* Estilo del texto secundario */
 .read-the-docs {
-  color: #888;
+	color: #888;
+	font-size: 0.9em;
+	margin-top: 1rem;
+}
+
+/* Estilo del input */
+input {
+	font-size: 1rem;
+	padding: 0.5rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 100%;
+	max-width: 400px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	outline: none;
+	transition: border-color 0.3s ease;
+}
+
+input:focus {
+	border-color: #3182ce; /* Azul Chakra */
+}
+
+/* Estilo del botón */
+button {
+	font-size: 1rem;
+	padding: 0.75rem 1.5rem;
+	border: none;
+	border-radius: 4px;
+	background-color: #3182ce; /* Azul Chakra */
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+	background-color: #2b6cb0; /* Azul más oscuro */
+	transform: scale(1.05); /* Pequeña animación */
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+	#root {
+		padding: 1rem;
+	}
+
+	input {
+		max-width: 100%;
+	}
+
+	button {
+		width: 100%;
+	}
 }
